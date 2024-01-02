@@ -4,6 +4,8 @@ import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
 import { Home, Menu } from "lucide-react";
+import { cn } from "@/lib/utils";
+import UseScroll from "@/hooks/use-scroll";
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
@@ -29,9 +31,14 @@ const Navbar = () => {
   }, []);
 
   const ref = useRef<HTMLDivElement | null>(null);
+  const scroll = UseScroll();
   return (
     <Container>
-      <div className="flex justify-between py-8 items-center">
+      <div
+        className={cn(
+          `flex justify-between h-16 border-b items-center transition-all duration-300`
+        )}
+      >
         <Link className="flex gap-x-1" href={"/"}>
           <Image src={"/Icon.svg"} alt="" width={25} height={25} />
           <span className="font-bold text-lg">NeXcent</span>
@@ -66,7 +73,9 @@ const Navbar = () => {
       {click && (
         <div
           ref={ref}
-          className="fixed flex flex-col justify-between items-start gap-y-5 rounded-md right-5 w-60 top-20 border bg-white h-64 shadow-sm hover:shadow-md transition-all p-5"
+          className={`fixed flex flex-col justify-between items-start gap-y-5 rounded-md right-5 w-60 top-20 border bg-white h-64 shadow-sm hover:shadow-md transition-all p-5 ${
+            click ? "opacity-100 visible" : " opacity-0 invisible"
+          }`}
         >
           <button className="flex flex-shrink-0 border-b-2 border-transparent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-neutral-800 after:transition-all after:duration-300 hover:after:w-full ">
             Home
