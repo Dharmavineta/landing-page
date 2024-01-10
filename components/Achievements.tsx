@@ -3,7 +3,7 @@ import React from "react";
 
 const Achievements = () => {
   return (
-    <div className="py-16 mt-20 grid lg:grid-cols-2 gap-10 lg:gap-0 place-items-center">
+    <div className="py-16 mt-20 grid lg:grid-cols-2 gap-10 lg:gap-0 place-items-center px-5 lg:px-0">
       <div className="text-center lg:text-start">
         <h1 className=" text-2xl">
           Helping a Local{" "}
@@ -15,7 +15,7 @@ const Achievements = () => {
           We reached here with our hard work and dedication
         </p>
       </div>
-      <div className="flex gap-x-20 lg:gap-x-32 px-2 ">
+      <div className="flex gap-x-5 md:gap-x-32 px-2 ">
         <div className="flex flex-col gap-y-10">
           <div className="flex gap-x-3 ">
             <Image

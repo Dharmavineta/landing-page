@@ -5,12 +5,18 @@ import Image from "next/image";
 const Content = () => {
   return (
     <Container>
-      <div className="grid lg:grid-cols-2 py-10 place-items-center mt-28 gap-y-20 lg:gap-y-0">
+      <div className="grid lg:grid-cols-2 py-10 place-items-center mt-28 gap-y-20 lg:gap-y-0 px-5 lg:px-0">
         <div className=" ">
-          <Image src={"/hero.png"} alt="" width={220} height={150} />
+          <Image
+            src={"/7.png"}
+            alt=""
+            width={250}
+            height={200}
+            className="lg:w-[400px] w-[300px] "
+          />
         </div>
         <div className="flex text-center lg:text-start gap-y-5 flex-col items-center justify-center lg:items-start lg:justify-start ">
-          <h1 className="text-4xl">
+          <h1 className="text-4xl max-w-prose">
             The Unseen of spending three years at Pixelgrade
           </h1>
           <p className="max-w-prose text-muted-foreground">

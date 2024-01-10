@@ -5,7 +5,7 @@ import Image from "next/image";
 const Clients = () => {
   return (
     <Container>
-      <div className="flex flex-col mt-28 items-center justify-center gap-y-4 shadow-sm  transition-all duration-200  p-4 ">
+      <div className="flex flex-col mt-40 items-center justify-center gap-y-4 shadow-sm  transition-all duration-200  p-4 ">
         <h1 className="font-medium text-3xl text">Our Clients</h1>
         <p className="text-muted-foreground text-sm max-w-prose text-center">
           We are proud to have been working with some of the fortune 500!
