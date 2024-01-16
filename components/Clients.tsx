@@ -1,11 +1,23 @@
+"use client";
 import React from "react";
 import Container from "./Container";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Clients = () => {
   return (
     <Container>
-      <div className="flex flex-col mt-40 items-center justify-center gap-y-4 shadow-sm  transition-all duration-200  p-4 ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          type: "tween",
+          ease: "easeInOut",
+          duration: 1.5,
+        }}
+        viewport={{ once: true, amount: 1 }}
+        className="flex flex-col mt-40 items-center justify-center gap-y-4 shadow-sm  transition-all duration-200  p-4 "
+      >
         <h1 className="font-medium text-3xl text">Our Clients</h1>
         <p className="text-muted-foreground text-sm max-w-prose text-center">
           We are proud to have been working with some of the fortune 500!
@@ -31,7 +43,7 @@ const Clients = () => {
             <Image src={"/logo6.svg"} fill alt="" />
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="mt-20 flex flex-col text-center">
         <h1 className=" max-w-prose text-4xl">
           Manage your entire community in a single system
