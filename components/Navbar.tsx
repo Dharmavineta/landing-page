@@ -74,7 +74,7 @@ const Navbar = () => {
         <div
           ref={ref}
           className={`fixed flex flex-col justify-between items-start gap-y-5 rounded-md right-5 w-60 top-20 border bg-white h-64 shadow-sm hover:shadow-md transition-all p-5 ${
-            click ? "opacity-100 visible" : " opacity-0 invisible"
+            click ? "opacity-100 " : " opacity-0 "
           }`}
         >
           <button className="flex flex-shrink-0 border-b-2 border-transparent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-neutral-800 after:transition-all after:duration-300 hover:after:w-full ">
